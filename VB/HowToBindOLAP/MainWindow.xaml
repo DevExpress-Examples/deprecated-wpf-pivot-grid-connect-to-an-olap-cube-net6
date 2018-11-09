@@ -1,4 +1,4 @@
-﻿<Window xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" 
+<Window xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="HowToBindOLAP.MainWindow"
