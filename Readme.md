@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/HowToBindOLAP/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/HowToBindOLAP/MainWindow.xaml))
+* [MainWindow.xaml.cs](./CS/HowToBindOLAP/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/HowToBindOLAP/MainWindow.xaml))
+<!-- default file list end -->
 # How to: Bind a PivotGrid to an OLAP Cube
 
 
