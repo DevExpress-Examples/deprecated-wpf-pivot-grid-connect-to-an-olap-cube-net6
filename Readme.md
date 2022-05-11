@@ -6,7 +6,7 @@
 
 # Pivot Grid for WPF -  Bind a PivotGrid to an OLAP Cube
 
-The following example demonstrates how to bind Pivot Grid to an MS OLAP cube.
+This example demonstrates how to bind Pivot Grid to an MS OLAP cube.
 
 <!-- default file list -->
 ## Files to Look at
