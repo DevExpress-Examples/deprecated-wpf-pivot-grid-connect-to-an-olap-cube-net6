@@ -16,7 +16,7 @@ The following example demonstrates how to bind Pivot Grid to an MS OLAP cube.
 <!-- default file list end -->
 ## Example Overview
 
-1. Create a data connection. For this, specify the [OlapConnectionString](https://docs.devexpress.com/WPF/DevExpress.Xpf.PivotGrid.PivotGridControl.OlapConnectionString).
+1. Create a data connection. For this, specify the [OlapConnectionString](https://docs.devexpress.com/WPF/DevExpress.Xpf.PivotGrid.PivotGridControl.OlapConnectionString) property.
 2. Create Pivot Grid fields and bind them to data. For this, use [DataSourceColumnBinding](https://docs.devexpress.com/WPF/DevExpress.Xpf.PivotGrid.DataSourceColumnBinding).
 3. Add the created fields to the [PivotGridControl.Fields](https://docs.devexpress.com/WPF/DevExpress.Xpf.PivotGrid.PivotGridControl.Fields) collection. 
 
