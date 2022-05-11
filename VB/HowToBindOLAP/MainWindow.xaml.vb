@@ -29,9 +29,14 @@ Namespace HowToBindOLAP
 			fieldDateFiscalYearFiscalYear.Area = FieldArea.ColumnArea
 			fieldDateFiscalYearFiscalYear.DataBinding = New DataSourceColumnBinding("[Date].[Fiscal Year].[Fiscal Year]")
 
+			Dim fieldSales As New PivotGridField()
+			fieldSales.Caption = "Cleared Amount"
+			fieldSales.Area = FieldArea.DataArea
+			fieldSales.DataBinding = New OlapExpressionBinding("[Measures].[Internet Sales Amount] * 0.87")
+			fieldSales.CellFormat = "c"
+
 			' Add fields to the PivotGridControl
-			pivotGridControl1.Fields.AddRange(fieldMeasuresInternetSalesAmount, fieldCustomerCountryCountry,
-				fieldDateFiscalYearFiscalYear)
+			pivotGridControl1.Fields.AddRange(fieldMeasuresInternetSalesAmount, fieldCustomerCountryCountry, fieldDateFiscalYearFiscalYear, fieldSales)
 
 			pivotGridControl1.EndUpdate()
 		End Sub

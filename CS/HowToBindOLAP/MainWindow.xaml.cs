@@ -35,9 +35,15 @@ namespace HowToBindOLAP {
             fieldDateFiscalYearFiscalYear.DataBinding = 
                 new DataSourceColumnBinding("[Date].[Fiscal Year].[Fiscal Year]");
 
+            PivotGridField fieldSales = new PivotGridField();
+            fieldSales.Caption = "Cleared Amount";
+            fieldSales.Area = FieldArea.DataArea;
+            fieldSales.DataBinding = new OlapExpressionBinding("[Measures].[Internet Sales Amount] * 0.87");
+            fieldSales.CellFormat = "c";
+
             // Add fields to the PivotGridControl
             pivotGridControl1.Fields.AddRange(fieldMeasuresInternetSalesAmount, 
-                fieldCustomerCountryCountry, fieldDateFiscalYearFiscalYear);
+                fieldCustomerCountryCountry, fieldDateFiscalYearFiscalYear, fieldSales);
 
             pivotGridControl1.EndUpdate();
         }
