@@ -15,17 +15,28 @@ namespace HowToBindOLAP {
 
             // Create fields.
             PivotGridField fieldMeasuresInternetSalesAmount = 
-                new PivotGridField("[Measures].[Internet Sales Amount]", FieldArea.DataArea);
+                new PivotGridField();
             fieldMeasuresInternetSalesAmount.Caption = "Internet Sales Amount";
-            
+            fieldMeasuresInternetSalesAmount.Area = FieldArea.DataArea;
+            fieldMeasuresInternetSalesAmount.DataBinding = 
+                new DataSourceColumnBinding("[Measures].[Internet Sales Amount]");
+
+
             PivotGridField fieldCustomerCountryCountry = 
-                new PivotGridField("[Customer].[Country].[Country]", FieldArea.RowArea);
+                new PivotGridField();
             fieldCustomerCountryCountry.Caption = "Country";
+            fieldCustomerCountryCountry.Area = FieldArea.RowArea;
+            fieldCustomerCountryCountry.DataBinding = 
+                new DataSourceColumnBinding("[Customer].[Country].[Country]");
             
+
             PivotGridField fieldDateFiscalYearFiscalYear = 
-                new PivotGridField("[Date].[Fiscal Year].[Fiscal Year]", FieldArea.ColumnArea);
+                new PivotGridField();
             fieldDateFiscalYearFiscalYear.Caption = "Fiscal Year";
-            
+            fieldDateFiscalYearFiscalYear.Area = FieldArea.ColumnArea;
+            fieldDateFiscalYearFiscalYear.DataBinding = 
+                new DataSourceColumnBinding("[Date].[Fiscal Year].[Fiscal Year]");
+
             // Add fields to the PivotGridControl
             pivotGridControl1.Fields.AddRange(fieldMeasuresInternetSalesAmount, 
                 fieldCustomerCountryCountry, fieldDateFiscalYearFiscalYear);
