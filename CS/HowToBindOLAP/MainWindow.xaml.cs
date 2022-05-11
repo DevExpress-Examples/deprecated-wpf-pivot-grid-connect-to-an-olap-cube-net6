@@ -21,7 +21,6 @@ namespace HowToBindOLAP {
             fieldMeasuresInternetSalesAmount.DataBinding = 
                 new DataSourceColumnBinding("[Measures].[Internet Sales Amount]");
 
-
             PivotGridField fieldCustomerCountryCountry = 
                 new PivotGridField();
             fieldCustomerCountryCountry.Caption = "Country";
@@ -29,7 +28,6 @@ namespace HowToBindOLAP {
             fieldCustomerCountryCountry.DataBinding = 
                 new DataSourceColumnBinding("[Customer].[Country].[Country]");
             
-
             PivotGridField fieldDateFiscalYearFiscalYear = 
                 new PivotGridField();
             fieldDateFiscalYearFiscalYear.Caption = "Fiscal Year";
