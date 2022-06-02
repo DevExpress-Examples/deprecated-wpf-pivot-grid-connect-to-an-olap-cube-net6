@@ -2,11 +2,14 @@ Imports System.Windows
 Imports DevExpress.Xpf.PivotGrid
 
 Namespace HowToBindOLAP
+
     Public Partial Class MainWindow
         Inherits Window
+
         Public Sub New()
             Me.InitializeComponent()
         End Sub
+
         Private Sub Window_Loaded(ByVal sender As Object, ByVal e As RoutedEventArgs)
             Me.pivotGridControl1.OlapConnectionString = "Provider=msolap;" & "Data Source=http://demos.devexpress.com/Services/OLAP/msmdpump.dll;" & "Initial Catalog=Adventure Works DW Standard Edition;" & "Cube Name=Adventure Works;"
             Me.pivotGridControl1.BeginUpdate()
