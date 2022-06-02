@@ -17,21 +17,22 @@ Namespace HowToBindOLAP
             Dim fieldMeasuresInternetSalesAmount As PivotGridField = New PivotGridField()
             fieldMeasuresInternetSalesAmount.Caption = "Internet Sales Amount"
             fieldMeasuresInternetSalesAmount.Area = FieldArea.DataArea
-            fieldMeasuresInternetSalesAmount.DataBinding = New DataSourceColumnBinding("[Measures].[Internet Sales Amount]")
             Dim fieldCustomerCountryCountry As PivotGridField = New PivotGridField()
             fieldCustomerCountryCountry.Caption = "Country"
             fieldCustomerCountryCountry.Area = FieldArea.RowArea
-            fieldCustomerCountryCountry.DataBinding = New DataSourceColumnBinding("[Customer].[Country].[Country]")
             Dim fieldDateFiscalYearFiscalYear As PivotGridField = New PivotGridField()
             fieldDateFiscalYearFiscalYear.Caption = "Fiscal Year"
             fieldDateFiscalYearFiscalYear.Area = FieldArea.ColumnArea
-            fieldDateFiscalYearFiscalYear.DataBinding = New DataSourceColumnBinding("[Date].[Fiscal Year].[Fiscal Year]")
             Dim fieldSales As PivotGridField = New PivotGridField()
             fieldSales.Caption = "Cleared Amount"
             fieldSales.Area = FieldArea.DataArea
-            fieldSales.DataBinding = New OlapExpressionBinding("[Measures].[Internet Sales Amount] * 0.87")
             fieldSales.CellFormat = "c"
-            ' Add fields to the PivotGridControl
+            ' Populate fields with data.
+            fieldMeasuresInternetSalesAmount.DataBinding = New DataSourceColumnBinding("[Measures].[Internet Sales Amount]")
+            fieldCustomerCountryCountry.DataBinding = New DataSourceColumnBinding("[Customer].[Country].[Country]")
+            fieldDateFiscalYearFiscalYear.DataBinding = New DataSourceColumnBinding("[Date].[Fiscal Year].[Fiscal Year]")
+            fieldSales.DataBinding = New OlapExpressionBinding("[Measures].[Internet Sales Amount] * 0.87")
+            ' Add fields to the PivotGridControl.
             Me.pivotGridControl1.Fields.AddRange(fieldMeasuresInternetSalesAmount, fieldCustomerCountryCountry, fieldDateFiscalYearFiscalYear, fieldSales)
             Me.pivotGridControl1.EndUpdate()
         End Sub
