@@ -19,7 +19,7 @@ This example demonstrates how to bind Pivot Grid to an MS OLAP cube.
 3. Add the created fields to the [PivotGridControl.Fields](https://docs.devexpress.com/WPF/DevExpress.Xpf.PivotGrid.PivotGridControl.Fields) collection. 
 
 ## Documentation
-- [OLAP Mode](https://docs.devexpress.com/CoreLibraries/403809/devexpress-pivot-grid-core-library/pivot-grid-modes/olap-mode)
+- [OLAP Mode](https://docs.devexpress.com/CoreLibraries/403809/devexpress-pivot-grid-core-library/pivot-grid-modes/olap-mode?v=22.1))
 
 ## More Examples 
 - [WPF Pivot Grid - Getting Started - Bind a Pivot Grid to an OLAP Cube](https://github.com/DevExpress-Examples/wpf-pivot-grid-getting-started-bind-a-pivot-grid-to-an-olap-cube-runtime-sample-t540936)
