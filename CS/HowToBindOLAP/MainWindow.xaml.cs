@@ -18,30 +18,36 @@ namespace HowToBindOLAP {
                 new PivotGridField();
             fieldMeasuresInternetSalesAmount.Caption = "Internet Sales Amount";
             fieldMeasuresInternetSalesAmount.Area = FieldArea.DataArea;
-            fieldMeasuresInternetSalesAmount.DataBinding = 
-                new DataSourceColumnBinding("[Measures].[Internet Sales Amount]");
-
+            
             PivotGridField fieldCustomerCountryCountry = 
                 new PivotGridField();
             fieldCustomerCountryCountry.Caption = "Country";
             fieldCustomerCountryCountry.Area = FieldArea.RowArea;
-            fieldCustomerCountryCountry.DataBinding = 
-                new DataSourceColumnBinding("[Customer].[Country].[Country]");
-            
+           
             PivotGridField fieldDateFiscalYearFiscalYear = 
                 new PivotGridField();
             fieldDateFiscalYearFiscalYear.Caption = "Fiscal Year";
             fieldDateFiscalYearFiscalYear.Area = FieldArea.ColumnArea;
-            fieldDateFiscalYearFiscalYear.DataBinding = 
-                new DataSourceColumnBinding("[Date].[Fiscal Year].[Fiscal Year]");
-
+           
             PivotGridField fieldSales = new PivotGridField();
             fieldSales.Caption = "Cleared Amount";
             fieldSales.Area = FieldArea.DataArea;
-            fieldSales.DataBinding = new OlapExpressionBinding("[Measures].[Internet Sales Amount] * 0.87");
             fieldSales.CellFormat = "c";
 
-            // Add fields to the PivotGridControl
+            // Populate fields with data.
+            fieldMeasuresInternetSalesAmount.DataBinding = 
+                new DataSourceColumnBinding("[Measures].[Internet Sales Amount]");
+
+            fieldCustomerCountryCountry.DataBinding = 
+                new DataSourceColumnBinding("[Customer].[Country].[Country]");
+
+            fieldDateFiscalYearFiscalYear.DataBinding = 
+                new DataSourceColumnBinding("[Date].[Fiscal Year].[Fiscal Year]");
+
+            fieldSales.DataBinding = 
+                new OlapExpressionBinding("[Measures].[Internet Sales Amount] * 0.87");
+           
+            // Add fields to the PivotGridControl.
             pivotGridControl1.Fields.AddRange(fieldMeasuresInternetSalesAmount, 
                 fieldCustomerCountryCountry, fieldDateFiscalYearFiscalYear, fieldSales);
 
