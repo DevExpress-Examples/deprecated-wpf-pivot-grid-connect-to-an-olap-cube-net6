@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# Pivot Grid for WPF -  Bind a PivotGrid to an OLAP Cube
+# Pivot Grid for WPF -  Bind a PivotGrid to an OLAP Cube in .NET 6.0
 This example demonstrates how to bind Pivot Grid to an MS OLAP cube.
 
 <!-- default file list -->
